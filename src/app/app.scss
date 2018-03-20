@@ -1,0 +1,73 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: 150px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 50%;
+  font-size: large;
+  color: white;
+}
+
+.right {
+  width: 50%;
+  font-size: large;
+  color: white;
+   button{
+     width: 100px;
+     height: 50px;
+     border-radius: 10px;
+   }
+  span{
+    font-size: small;
+    position: absolute;  /* this makes the text able to be placed over the image without getting pushed over */
+    text-align: center; /*text will be horizontally centered in the image*/
+    color: white;
+  }
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@font-face{
+    font-family: "brandon-grotesque-regular";
+    src: url('../assets/fonts/Brandon-Grotesque/Brandon-reg.otf')format('otf'),
+         url('../assets/fonts/Brandon-Grotesque/brandon_reg-webfont.woff2') format('woff2'),
+         url('../assets/fonts/Brandon-Grotesque/brandon_reg-webfont.woff') format('woff'),
+         url('../assets/fonts/Brandon-Grotesque/brandon_reg-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: brandon-grotesque-regular;
+}
+
+@import "../theme/nav.scss", "../theme/footer.scss";
